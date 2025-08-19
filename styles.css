@@ -166,7 +166,7 @@
 @layer section-2 {
     .section-2 .icons-container {
         display: grid;
-        grid-template-columns: repeat(3, 350px);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         justify-content: center;
         align-items: center;
         gap: 10rem;
