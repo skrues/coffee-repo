@@ -9,6 +9,7 @@
 @layer colors {
     :root {
         --color-links: hsl(28, 50%, 12%);
+        --color-links-hovered: hsl(28, 50%, 32%);
         --color-white: rgb(221, 200, 200);
     }
 }
@@ -75,8 +76,14 @@
     }
     header li a {
         color: var(--color-links);
+        transition: .3s ease-in-out;
     }
-
+    header li a:hover {
+        color: var(--color-links-hovered);
+    }
+    header li a.active {
+        color: var(--color-links-hovered);
+    }
     .logo {
         width: 150px;
         height: auto;
@@ -134,13 +141,22 @@
     }
     .section-1-content a {
         color: var(--color-white);
-        background: black;
-        width: 150px;
+        background: transparent;
+        width: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 10px 20px;
         border-radius: 5px;
+        border: 1px solid var(--color-white);
         text-transform: capitalize;
+        font-weight: 700;
+        font-family: var(--ff-open-sans);
+        font-size: 1.1rem;
+        transition: .3s ease-in-out;
+    }
+    .section-1-content a:hover {
+        color: var(--color-white);
+        background: var(--color-links-hovered);
     }
 }
