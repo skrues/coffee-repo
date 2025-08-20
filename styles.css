@@ -10,7 +10,8 @@
     :root {
         --color-links: hsl(28, 50%, 32%);
         --color-links-hovered: hsl(28, 50%, 62%);
-        --color-white: rgb(221, 200, 200);
+        --color-white: hsl(0, 24%, 83%);
+        --color-bg: hsl(39, 31%, 84%);
     }
 }
 @layer reset {
@@ -52,6 +53,10 @@
     }
     .mw-16 {
         max-width: 1600px;
+        margin-inline: auto;
+    }
+    .mw-18 {
+        max-width: 1800px;
         margin-inline: auto;
     }
 }
@@ -165,16 +170,20 @@
 }
 @layer section-2 {
     .section-2 .icons-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 10rem;
+        gap: 3rem;
         padding-top: 10px;
+        margin-bottom: 20px;
     }
     .section-2 .icon {
         text-align: center;
-        width: 100%;
+        width: 500px;
+        height: 100%;
     }
     .section-2 .icon img {
         height: auto;
@@ -192,5 +201,12 @@
         font-size: .7rem;
         font-weight: 400;
         margin-top: 5px;
+    }
+}
+@layer section-3 {
+    .section-3 {
+        background: var(--color-bg);
+        width: 100%;
+        height: 100vh;
     }
 }
