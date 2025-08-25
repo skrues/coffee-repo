@@ -13,6 +13,7 @@
         --color-white: hsl(0, 24%, 83%);
         /* --color-bg: hsl(39, 31%, 84%); */
         --color-bg: gray;
+        --color-bg-card: hsl(17, 63%, 14%);
     }
 }
 @layer reset {
@@ -175,7 +176,8 @@
     }
     .section-2 .icons-container {
         /* display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        place-items: center; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -186,7 +188,7 @@
     }
     .section-2 .icon {
         text-align: center;
-        width: 500px;
+        width: 400px;
         height: 100%;
     }
     .section-2 .icon img {
@@ -209,36 +211,67 @@
 }
 @layer section-3 {
     .section-3 {
-        background: var(--color-bg);
+        /* background: var(--color-bg); */
         width: 100%;
+        padding-bottom: 20px;
+    }
+    .section-3 h2 {
+        font-weight: 700;
+        font-size: 4rem;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
     }
 
     .card-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        place-items: center;
+        /* justify-content: center;
+        align-items: center; */
+        gap: 2rem;
     }
     .card {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        height: 250px;
-        width: 250px;
+        /* align-items: center; */
+        height: 100%;
+        width: 100%;
+        background: var(--color-bg-card);
+        padding-bottom: 10px;
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
     }
-    .card-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 250px;
-        width: 250px;
+    .card h3 {
+        padding-left: 5px;
+        padding-top: 10px;
+        font-size: 1.4rem;
+    }
+    .card p {
+        max-width: 99%;
+        font-size: .9rem;
+        font-weight: 200;
+        margin-block: 10px;
+        padding: 0 5px;
     }
     .card img{
         width: 100%;
-        height: 100%;
+        height: 380px;
         object-fit: cover;
+    }
+    .cta {
+        padding-left: 5px;
+    }
+    .cta a {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--color-white);
+        padding: 10px 20px;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-right: 10px;
     }
 }
