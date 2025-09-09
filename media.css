@@ -1,0 +1,30 @@
+@media(width <= 992px) {
+    .header-nav ul {
+        position: absolute;
+        flex-direction: column;
+        width: 80%;
+        height: 100vh;
+        top: 0;
+        right: -80%;
+        background-color: black;
+        transition: 0.3s ease-in;
+    }
+    .header-nav ul.active {
+        right: 0 ;
+    }
+    .navbar {
+        display: block;
+        padding-right: 20px;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 100;
+        color: var(--color-links);
+    }
+    .navbar-close {
+        color: white;
+    }
+
+    .card-container {
+        padding-inline: 20px;
+    }
+}

@@ -98,6 +98,12 @@
     .logo img {
         width: 100%;
     }
+    .navbar {
+        display: none;
+    }
+    .navbar-close {
+        display: none;
+    }
 }
 @layer section-1 {
     .section-1 {
