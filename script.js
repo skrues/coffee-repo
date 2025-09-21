@@ -1,8 +1,28 @@
-const body = document.body
+const navToggle = document.querySelector(".navbar");
+const navbar = document.querySelector(".ul");
 
-const navbar = document.querySelector(".navbar").addEventListener("click", () => {
-    const headerNav = document.querySelector(".header-nav ul")
-    headerNav.classList.toggle("active")
-    body.classList.toggle("no-scroll")
-})
+// Toggle nav open/close
+navToggle.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+});
+
+// Close nav when clicking links
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    // If same-page anchor (#id), scroll smoothly
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    // Always close the nav
+    navbar.classList.remove("active");
+  });
+});
+
 

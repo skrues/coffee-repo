@@ -12,9 +12,9 @@
         top: 100%;
         right: -100%;
         background-color: rgba(0,0,0,0.9);
-        transition: 0.3s ease-in;
+        transition: 0.2s ease-in;
     }
-    .header-nav ul.active {
+    .ul.active {
         right: 0;
     }
     .navbar {
